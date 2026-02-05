@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Valentine 🖤</title>
+ 
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  max-width: 360px;
+  text-align: center;
+}
+ 
+h1, h2 {
+  color: #e63946;
+}
+ 
+img {
+  width: 100%;
+  border-radius: 20px;
+  margin: 15px 0;
+}
+ 
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 10px;
+}
+ 
+.yes {
+  background: #ff4d6d;
+  color: white;
+}
+ 
+.no {
+  background: #adb5bd;
+}
+ 
+.big {
+  font-size: 22px;
+  padding: 20px 35px;
+}
+</style>
+</head>
+ 
+<body>
+ 
+<div class="card" id="content">
+  <h1>Hey Cutie 🖤</h1>
+ 
+  <!-- Replace image links with your own 
+  <img src="https://i.imgur.com/4AiXzf8.jpeg">-->
+ 
+  <h2>
+    Will you be my Valentine?<br>
+    <small>(Answer slowly 😌)</small>
+  </h2>
+ 
+  <button class="yes" onclick="step1()">Yes 🤍</button>
+  <button class="no">No 🙈</button>
+</div>
+ 
+<script>
+function step1() {
+  document.getElementById("content").innerHTML = `
+    <h1>I was hoping you’d say that 😌</h1>
+ 
+    <!--<img src="https://i.imgur.com/jTqNa6K.jpeg">-->
+ 
+    <h2>
+      Are you sure?<br><br>
+      Because this isn’t just a yes.<br>
+      It’s you choosing me.
+    </h2>
+ 
+    <button class="yes" onclick="step2()">Yes 🤍</button>
+  `;
+}
+ 
+function step2() {
+  document.getElementById("content").innerHTML = `
+    <h1>Good… 🖤</h1>
+ 
+    <!--<img src="https://i.imgur.com/8RKXAIV.jpeg">-->
+ 
+    <h2>
+      Are you really sure?<br><br>
+      I like slow moments.<br>
+      Lingering looks.<br>
+      And making you wait just a little 😌
+    </h2>
+ 
+    <button class="yes big" onclick="step3()">Yes, I’ll wait 🤍</button>
+  `;
+}
+ 
+function step3() {
+  document.getElementById("content").innerHTML = `
+    <h1>One last thing 😏</h1>
+ 
+    <!--<img src="https://i.imgur.com/Z7AzH2c.jpeg">-->
+ 
+    <h2>
+      Saying yes means you choosing me.<br>
+      In my space. In my arms.<br>
+      In moments that get a little too quiet 🖤<br><br>
+      Are you <b>ABSOLUTELY</b> sure, Handsome?
+    </h2>
+ 
+    <button class="yes big" onclick="finalStep()">Yes. I trust you 🤍</button>
+  `;
+}
+ 
+function finalStep() {
+  document.body.innerHTML = `
+    <div style="
+      height:100vh;
+      background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:25px;
+      font-family: Arial;">
+ 
+      <div>
+        <h1 style="color:#e63946;">
+          Good 🖤<br><br>
+          You’re my Valentine now.<br><br>
+          I hope you’re patient…<br>
+          some things are worth waiting for 😌
+        </h1>
+ 
+        <p id="secret" style="
+          opacity:0;
+          margin-top:25px;
+          font-size:16px;
+          color:#6d6875;
+          transition: opacity 2s;">
+          (You’re going to think about this later 🤍)
+        </p>
+      </div>
+    </div>
+  `;
+ 
+  setTimeout(() => {
+    document.getElementById("secret").style.opacity = 1;
+  }, 3000);
+}
+</script>
+ 
+</body>
+</html>
+ 
